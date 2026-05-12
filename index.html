@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerra Fría: Memoria Histórica</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div id="NavBar">
+        <h1>GUERRA FRÍA: Memorama Historico</h1>
+    </div>
+    
+    <div id="PanelControl">
+        <div id="Date">Estado: <span id="estado-op">Sesión Iniciada</span></div>
+        <div id="Score">Temas Aprendidos: <span id="puntuacion">0</span> / 6</div>
+        <button id="BtnReiniciar" onclick="reiniciarJuego()">Reiniciar Juego</button>
+    </div>
+
+    <div id="MainContent">
+        <div id="GameBoard"></div>
+        
+        <div id="InfoPanel">
+            <h2>📜 Archivo Histórico</h2>
+            <div id="InfoContent">
+                <p id="InfoText">Seleccione las tarjetas para descubrir los conceptos fundamentales que definieron el equilibrio de poder en el siglo XX.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="Javascript/script.js"></script>
+</body>
+</html>
