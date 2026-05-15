@@ -246,3 +246,15 @@ body {
         padding: 10px;
     }
 }
+
+/* --- ESTILOS PARA LA IMAGEN DEL ARCHIVO HISTÓRICO --- */
+.imagen-historica {
+    width: 100%; /* Se adapta al ancho del panel */
+    max-height: 180px; /* Limita la altura para no ocupar demasiada pantalla */
+    object-fit: cover; /* Evita que la imagen se deforme */
+    border-radius: 3px;
+    border: 2px solid #1a1a1a;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+    filter: sepia(40%) contrast(110%); /* Efecto ligeramente antiguo/vintage */
+}
