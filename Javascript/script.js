@@ -9,6 +9,15 @@ const datosInteligencia = {
     '⏱️': '<strong>El Reloj del Apocalipsis:</strong> Fundado por el Boletín de Científicos Atómicos, es un símbolo que representa la proximidad de la humanidad a una catástrofe global causada por tecnologías creadas por el hombre (inicialmente armas nucleares). Durante la Guerra Fría, las manecillas se movieron según el clima político, reflejando qué tan cerca estaba el mundo de un conflicto terminal.'
 };
 
+const imagenesInteligencia = {
+    '🇺🇸/🇷🇺': 'https://content-historia.nationalgeographic.com.es/medio/2025/07/22/guerra-fria_6a35157f_250722160456_1280x642.webp',
+    '🧱': 'https://ichef.bbci.co.uk/ace/ws/549/amz/worldservice/live/assets/images/2014/11/05/141105220728_sp_galeria_berlin6_549x549_jorgeandrescastillo.jpg.webp',
+    '🚀': 'https://bogota.gov.co/sites/default/files/styles/1050px/public/eventos/2025-04/planes-en-bogota-shows-inmersivos-carrera-espacial-en-el-planetario.jpg',
+    '☢️': 'https://www.socialhizo.com/images/edad_contemporanea/guerra_fria/caricatura-equilibrio-terror.jpg',
+    '🤝': 'https://www.defensa.com/foto-articulo-fichero_30496_20220527.jpg,640,360,0.jpg',
+    '⏱️': 'https://static01.nyt.com/images/2026/01/28/espanol/28xp-doomsday-gwtb-ES-copy1/28xp-doomsday-gwtb-superJumbo.jpg?quality=75&auto=webp'
+};
+
 let primeraTarjeta, segundaTarjeta;
 let bloquearTablero = false; 
 let paresEncontrados = 0;
@@ -74,7 +83,11 @@ function verificarCoincidencia() {
         paresEncontrados++;
         puntuacionDisplay.textContent = paresEncontrados;
         
-        infoTextDisplay.innerHTML = `<span style="color: #cd0000; font-weight: bold; font-family: 'Courier New';">CONTEXTO HISTÓRICO:</span><br><br>${datosInteligencia[primeraTarjeta.dataset.icono]}`;
+        // Reemplaza la línea de infoTextDisplay.innerHTML con esto:
+        infoTextDisplay.innerHTML = `
+            <img src="${imagenesInteligencia[primeraTarjeta.dataset.icono]}" alt="Documento fotográfico" class="imagen-historica">
+            <span style="color: #cd0000; font-weight: bold; font-family: 'Courier New';">CONTEXTO HISTÓRICO:</span><br><br>${datosInteligencia[primeraTarjeta.dataset.icono]}
+        `;
 
         if (paresEncontrados === 6) {
             estadoDisplay.textContent = "ANÁLISIS COMPLETADO";
@@ -101,5 +114,7 @@ function resetearTurno() {
 function reiniciarJuego() {
     iniciarJuego();
 }
+
+
 
 iniciarJuego();
